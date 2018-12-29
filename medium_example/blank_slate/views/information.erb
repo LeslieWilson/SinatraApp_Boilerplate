@@ -1,21 +1,22 @@
-<body>
+<h1>infobel<h1>
 
-    <h1>infobel<h1>
+    <ul>
+    <% @information.each do |info| %>
+        <li><%="#{information}"%></li>
+    <% end %>
+    </ul>
+<%end%>
+    <form action = "/information" method= "post">
 
-            <form action = "/information" method= "post">
-                <label for = "info_name" id= "testme">titl:</label>
-                <input type = "text" id="info_name" name="info_name"
+    <label for = "info_name" id= "testme">titl:</label>
+
+    <input type = "text" id="info_name" name="info_name"
+    <label for = "info_description" id = "leslie">descrip:</label>
 
 
-                <label for = "info_description" id = "leslie">descrip:</label>
+    <input type = "text" id="info_description" name="info_description"
 
 
-                <input type = "text" id="info_description" name="info_description"
-                <label for = "info_submit">sub</label>
-                <input type = "submit" id="info_submit" name="info_submit">
+    <input type = "submit" id="info_submit" name="info_submit">
 
-            </form>
-
-<h2><% if @error %> error!</h2>
-            <% end %>
-        </body>
+    </form>
