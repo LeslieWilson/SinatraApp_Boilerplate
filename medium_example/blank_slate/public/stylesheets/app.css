@@ -1,4 +1,4 @@
-#article_name {
+#info_name {
     display: block;
     margin-top: 0em;
     color:blue;
@@ -12,7 +12,7 @@
     color:blue;
 }
 
-#article_description {
+#info_description {
     display: block;
     margin-top: 0em;
 }

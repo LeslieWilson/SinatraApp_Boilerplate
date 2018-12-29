@@ -1,0 +1,9 @@
+post '/information' do
+    if @urls.include?(params[:url])
+        @error_message = "you have already submitted that URL"
+        erb :new
+    else
+        CSV.open("information.csv", "a") do |csv|
+            csv << [array_of_info_objects.length + 1, params[:name], params[:url], "#{params[:description]}"]
+        end
+    end
